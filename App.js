@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { Splash } from './src/pages'
+import { GetStarted, Splash } from './src/pages'
 
 const App = () => {
   return (
-      <Splash />
+      <GetStarted />
   )
 }
 

@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Logo } from '../../assets/illustrations'
+import { fonts } from '../../utils/fonts'
 
 const Splash = () => {
   return (
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
 
     text: {
         fontSize: 20,
-        fontWeight: '600',
+        fontFamily: fonts.primary[600],
         color: '#112340',
         marginTop: 20
     }
