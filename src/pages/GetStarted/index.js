@@ -5,7 +5,7 @@ import Button from '../../components/Button'
 import Gap from '../../components/Gap'
 import { fonts } from '../../utils/fonts'
 
-const GetStarted = () => {
+const GetStarted = ({navigation}) => {
   return (
     <ImageBackground source={BGGetStarted} style={styles.container}>
         <View>
@@ -13,9 +13,9 @@ const GetStarted = () => {
             <Text style={styles.text}>Konsultasi dengan dokter jadi lebih mudah & fleksibel.</Text>
         </View>
         <View>
-            <Button title="Get Started"/>
+            <Button title="Get Started" onPress={() => navigation.navigate('SignUp')} />
             <Gap height={16}/>
-            <Button title="Sign In" type="secondary"/>
+            <Button title="Sign In" type="secondary" onPress={() => navigation.navigate('SignIn')}/>
         </View>
     </ImageBackground>
   )

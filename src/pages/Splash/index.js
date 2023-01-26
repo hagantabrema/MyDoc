@@ -1,9 +1,16 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Logo } from '../../assets/illustrations'
 import { fonts } from '../../utils/fonts'
 
-const Splash = () => {
+const Splash = ({navigation}) => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('GetStarted')
+    }, 1500)
+  }, [])
+
   return (
     <View style={styles.container}>
         <Logo />
