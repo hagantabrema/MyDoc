@@ -1,9 +1,8 @@
 import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { Logo, BGGetStarted } from '../../assets/illustrations'
-import Button from '../../components/Button'
-import Gap from '../../components/Gap'
-import { fonts } from '../../utils/fonts'
+import { Button, Gap } from '../../components'
+import { fonts } from '../../utils'
 
 const GetStarted = ({navigation}) => {
   return (

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useEffect } from 'react'
-import { Logo } from '../../assets/illustrations'
-import { fonts } from '../../utils/fonts'
+import { Logo } from '../../assets'
+import { fonts } from '../../utils'
 
 const Splash = ({navigation}) => {
 
