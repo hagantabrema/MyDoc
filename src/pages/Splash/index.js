@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useEffect } from 'react'
 import { Logo } from '../../assets'
-import { fonts } from '../../utils'
+import { colors, fonts } from '../../utils'
 
 const Splash = ({navigation}) => {
 
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 20,
         fontFamily: fonts.primary[600],
-        color: '#112340',
+        color: colors.text.primary,
         marginTop: 20
     }
 })

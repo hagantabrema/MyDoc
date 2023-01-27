@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Logo } from '../../assets'
 import { Button, Gap, Input, Link } from '../../components'
-import { fonts } from '../../utils'
+import { colors, fonts } from '../../utils'
 
 const SignIn = ({navigation}) => {
   return (
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    color: '#112340',
+    color: colors.text.secondary,
     fontFamily: fonts.primary[600],
     fontSize: 20,
     marginTop: 40,
