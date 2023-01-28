@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React from 'react'
-import { GetStarted, SignIn, SignUp, Splash } from './src/pages'
+import { GetStarted, SignIn, SignUp, Splash, UploadPhoto } from './src/pages'
 
 const Stack = createNativeStackNavigator()
 
@@ -27,6 +27,11 @@ const App = () => {
         <Stack.Screen
           name='SignIn'
           component={SignIn}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name='UploadPhoto'
+          component={UploadPhoto}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
