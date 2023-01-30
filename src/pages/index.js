@@ -1,4 +1,7 @@
+import Doctor from './Doctor'
 import GetStarted from "./GetStarted";
+import Hospitals from './Hospitals'
+import Messages from './Messages'
 import Splash from "./Splash";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
@@ -9,5 +12,8 @@ export {
     GetStarted,
     SignUp,
     SignIn,
-    UploadPhoto
+    UploadPhoto,
+    Doctor,
+    Hospitals,
+    Messages
 }

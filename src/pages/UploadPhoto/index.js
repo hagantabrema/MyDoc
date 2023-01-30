@@ -4,7 +4,7 @@ import { Button, Gap, Header, Link } from '../../components'
 import { IconAddPhoto, NullPhoto } from '../../assets'
 import { colors, fonts } from '../../utils'
 
-const UploadPhoto = () => {
+const UploadPhoto = ({navigation}) => {
   return (
     <View style={styles.container}>
         <Header title="Upload Photo" />
@@ -20,7 +20,7 @@ const UploadPhoto = () => {
             <Text style={styles.job}>Software Engineer</Text>
           </View>
           <View>
-            <Button title="Upload and Continue" />
+            <Button title="Upload and Continue" onPress={() => navigation.replace('MainApp')} />
             <Gap height={30} />
             <Link text="Skip for this" size={16} align="center"/>
           </View>
