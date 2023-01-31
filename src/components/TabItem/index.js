@@ -5,7 +5,7 @@ import { colors, fonts } from '../../utils'
 
 const TabItem = ({title, active, onPress, onLongPress}) => {
     const Icon = () => {
-        if (title === 'Doctor') {
+        if (title === 'Home') {
             return active ? <IconDoctorActive/> : <IconDoctor/>
         }
 
