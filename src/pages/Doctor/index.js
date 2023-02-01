@@ -3,7 +3,7 @@ import React from 'react'
 import { DoctorCategory, Gap, HomeProfile, NewsItem, RatedDoctors } from '../../components'
 import { colors, fonts } from '../../utils'
 
-const Doctor = () => {
+const Doctor = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.wrapper}>
@@ -17,7 +17,7 @@ const Doctor = () => {
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <View style={styles.category}>
                 <Gap width={32} />
-                <DoctorCategory />
+                <DoctorCategory onPress={() => navigation.navigate('DoctorList')}/>
                 <DoctorCategory />
                 <DoctorCategory />
                 <DoctorCategory />

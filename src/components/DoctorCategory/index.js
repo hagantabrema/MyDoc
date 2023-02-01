@@ -1,17 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { DokterUmum } from '../../assets'
 import { colors, fonts } from '../../utils'
 import Gap from '../Gap'
 
-const DoctorCategory = () => {
+const DoctorCategory = ({onPress}) => {
   return (
-    <View style={styles.card}>
+    <TouchableOpacity style={styles.card} onPress={onPress}>
         <DokterUmum />
         <Gap height={30} />
         <Text style={styles.text()}>Saya butuh</Text>
         <Text style={styles.text("category")}>dokter umum</Text>
-    </View>
+    </TouchableOpacity>
   )
 }
 

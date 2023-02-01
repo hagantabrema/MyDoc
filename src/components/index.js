@@ -2,6 +2,7 @@ import BottomNavigator from "./BottomNavigator";
 import Button from "./Button";
 import ChatItem from "./ChatItem";
 import DoctorCategory from './DoctorCategory';
+import DoctorItem from "./DoctorItem";
 import Gap from "./Gap";
 import Header from "./Header";
 import HomeProfile from "./HomeProfile";
@@ -23,5 +24,6 @@ export {
     NewsItem,
     RatedDoctors,
     ChatItem,
-    HospitalItem
+    HospitalItem,
+    DoctorItem
 }
