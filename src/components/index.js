@@ -5,6 +5,7 @@ import DoctorCategory from './DoctorCategory';
 import Gap from "./Gap";
 import Header from "./Header";
 import HomeProfile from "./HomeProfile";
+import HospitalItem from "./HospitalItem";
 import Input from "./Input";
 import Link from "./Link";
 import NewsItem from './NewsItem';
@@ -21,5 +22,6 @@ export {
     DoctorCategory,
     NewsItem,
     RatedDoctors,
-    ChatItem
+    ChatItem,
+    HospitalItem
 }
