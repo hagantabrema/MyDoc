@@ -11,6 +11,10 @@ import IconMessagesActive from './messages-active.svg'
 import ChevronRight from './chevron_right.svg'
 import SendLight from './send_light.svg'
 import SendDark from './send_dark.svg'
+import AccountCircle from './account_circle.svg'
+import Language from './translate.svg'
+import Rate from './star.svg'
+import Help from './description.svg'
 
 export {
     IconBackDark,
@@ -25,5 +29,9 @@ export {
     IconMessagesActive,
     ChevronRight,
     SendDark,
-    SendLight
+    SendLight,
+    AccountCircle,
+    Language,
+    Rate,
+    Help
 }

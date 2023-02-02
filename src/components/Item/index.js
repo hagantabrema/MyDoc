@@ -1,24 +1,42 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { ChevronRight, NullPhoto } from '../../assets'
+import { AccountCircle, ChevronRight, Help, Language, NullPhoto, Rate } from '../../assets'
 import { colors, fonts } from '../../utils'
 
-const DoctorItem = ({onPress}) => {
+const Item = ({onPress, name, desc, icon}) => {
+
+  const Icon = () => {
+    if (icon === 'edit-profile') {
+      return <AccountCircle />
+    }
+    if (icon === 'language') {
+      return <Language />
+    } 
+    if (icon === 'rate') {
+      return <Rate />
+    }
+    if (icon === 'help') {
+      return <Help />
+    }
+
+    return <AccountCircle />
+  }
+
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
         <View style={styles.profile}>
-            <Image source={NullPhoto} style={styles.avatar}/>
-            <View style={styles.text}>
-                <Text style={styles.name}>Eleanor Alexandra</Text>
-                <Text style={styles.message}>Wanita</Text>
-            </View>
+          {icon ? <Icon /> : <Image source={NullPhoto} style={styles.avatar}/>}
+          <View style={styles.text}>
+            <Text style={styles.name}>{name}</Text>
+            <Text style={styles.desc}>{desc}</Text>
+          </View>
       </View>
       <ChevronRight />
     </TouchableOpacity>
   )
 }
 
-export default DoctorItem
+export default Item
 
 const styles = StyleSheet.create({
   container: {
@@ -31,13 +49,18 @@ const styles = StyleSheet.create({
   },
 
   profile: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'center'
   },
 
   avatar: {
     height: 46,
     width: 46,
-    marginRight: 12
+    //marginRight: 12
+  },
+
+  text: {
+    marginLeft: 16
   },
 
   name: {
@@ -47,7 +70,7 @@ const styles = StyleSheet.create({
     marginBottom: 4
   },
 
-  message: {
+  desc: {
     fontFamily: fonts.primary[300],
     color: colors.text.secondary,
     fontSize: 12
