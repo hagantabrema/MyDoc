@@ -15,6 +15,8 @@ import AccountCircle from './account_circle.svg'
 import Language from './translate.svg'
 import Rate from './star.svg'
 import Help from './description.svg'
+import IconMale from './icon_male.svg'
+import IconFemale from './icon_female.svg'
 
 export {
     IconBackDark,
@@ -33,5 +35,7 @@ export {
     AccountCircle,
     Language,
     Rate,
-    Help
+    Help,
+    IconMale,
+    IconFemale
 }

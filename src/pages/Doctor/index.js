@@ -27,7 +27,7 @@ const Doctor = ({navigation}) => {
           </View>
           <View style={styles.contentWrapper}>
             <Text style={styles.text}>Top Rated Doctors</Text>
-            <RatedDoctors />
+            <RatedDoctors onPress={() => navigation.navigate('DoctorProfile')} />
             <RatedDoctors />
             <RatedDoctors />
             <Text style={styles.text}>Good News</Text>

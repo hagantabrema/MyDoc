@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { Item, Header } from '../../components'
+import { Item, Header, Profile } from '../../components'
 import { NullPhoto } from '../../assets'
 import { colors, fonts } from '../../utils'
 
@@ -9,13 +9,7 @@ const UserProfile = () => {
     <View style={styles.container}>
         <Header title="Profile" />
         <View style={styles.content}>
-            <View style={styles.profile}>
-                <View style={styles.avatarWrapper}>
-                    <Image source={NullPhoto} style={styles.avatar} />
-                </View>
-                <Text style={styles.name}>Haganta Bangun</Text>
-                <Text style={styles.job}>Software Engineer</Text>
-            </View>
+            <Profile name="Haganta Bangun" job="Software Engineer" />
             <View style={styles.settings}>
                 <Item name="Edit Profile" desc="Last updated: yesterday" icon="edit-profile" />
                 <Item name="Language" desc="Available in 12 languages" icon="language" />

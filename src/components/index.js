@@ -13,6 +13,8 @@ import MessageInput from "./MessageInput";
 import MessageItem from "./MessageItem";
 import NewsItem from './NewsItem';
 import RatedDoctors from './RatedDoctors';
+import Profile from "./Profile";
+import DoctorDataItem from "./DoctorDataItem";
 
 export {
     Button,
@@ -29,5 +31,7 @@ export {
     HospitalItem,
     Item,
     MessageItem,
-    MessageInput
+    MessageInput,
+    Profile,
+    DoctorDataItem
 }

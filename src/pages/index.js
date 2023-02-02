@@ -9,6 +9,7 @@ import UploadPhoto from "./UploadPhoto";
 import DoctorList from './DoctorList';
 import Chatting from './Chatting';
 import UserProfile from './UserProfile';
+import DoctorProfile from './DoctorProfile';
 
 export {
     Splash,
@@ -22,4 +23,5 @@ export {
     DoctorList,
     Chatting,
     UserProfile,
+    DoctorProfile
 }
