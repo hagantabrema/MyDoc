@@ -3,8 +3,12 @@ import React from 'react'
 import { fonts } from '../../utils/fonts'
 import { colors } from '../../utils'
 import IconOnly from './IconOnly'
+import SendButton from './SendButton'
 
-const Button = ({type, title, onPress, icon}) => {
+const Button = ({type, title, onPress, icon, disable}) => {
+  if (type === 'send-button') {
+    return <SendButton disable={disable} />
+  }
   
   if (type === 'icon') {
     return <IconOnly onPress={onPress} icon={icon} />

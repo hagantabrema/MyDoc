@@ -3,11 +3,11 @@ import React from 'react'
 import { Header } from '../../components'
 import { DoctorItem } from '../../components'
 
-const DoctorList = () => {
+const DoctorList = ({navigation}) => {
   return (
     <View>
-        <Header title="Pilih Dokter Umum" type="background" />
-        <DoctorItem />
+        <Header title="Pilih Dokter Umum" type="background" onPress={() => navigation.goBack()} />
+        <DoctorItem onPress={() => navigation.navigate('Chatting')} />
         <DoctorItem />
         <DoctorItem />
         <DoctorItem />

@@ -9,6 +9,8 @@ import IconHospitalsActive from './hospitals-active.svg'
 import IconMessages from './messages.svg'
 import IconMessagesActive from './messages-active.svg'
 import ChevronRight from './chevron_right.svg'
+import SendLight from './send_light.svg'
+import SendDark from './send_dark.svg'
 
 export {
     IconBackDark,
@@ -21,5 +23,7 @@ export {
     IconHospitalsActive,
     IconMessages,
     IconMessagesActive,
-    ChevronRight
+    ChevronRight,
+    SendDark,
+    SendLight
 }

@@ -7,6 +7,7 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import UploadPhoto from "./UploadPhoto";
 import DoctorList from './DoctorList';
+import Chatting from './Chatting';
 
 export {
     Splash,
@@ -17,5 +18,6 @@ export {
     Doctor,
     Hospitals,
     Messages,
-    DoctorList
+    DoctorList,
+    Chatting
 }

@@ -9,6 +9,8 @@ import HomeProfile from "./HomeProfile";
 import HospitalItem from "./HospitalItem";
 import Input from "./Input";
 import Link from "./Link";
+import MessageInput from "./MessageInput";
+import MessageItem from "./MessageItem";
 import NewsItem from './NewsItem';
 import RatedDoctors from './RatedDoctors';
 
@@ -25,5 +27,7 @@ export {
     RatedDoctors,
     ChatItem,
     HospitalItem,
-    DoctorItem
+    DoctorItem,
+    MessageItem,
+    MessageInput
 }

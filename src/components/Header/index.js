@@ -4,8 +4,13 @@ import { IconBackDark } from '../../assets'
 import { colors, fonts } from '../../utils'
 import Gap from '../Gap'
 import Button from '../Button'
+import Profile from './Profile'
 
 const Header = ({title, onPress, type}) => {
+  if (type === 'profile') {
+    return <Profile />
+  }
+
   return (
     <View style={styles.container(type)}>
         <Button type="icon" icon={type === 'background' ? "back-light" : "back-dark"} onPress={onPress} />
