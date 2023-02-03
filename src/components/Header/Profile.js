@@ -5,10 +5,10 @@ import { fonts, colors } from '../../utils'
 import Gap from '../Gap'
 import { NullPhoto } from '../../assets'
 
-const Profile = () => {
+const Profile = ({onPress}) => {
   return (
     <View style={styles.container}>
-        <Button type="icon" icon="back-light" />
+        <Button type="icon" icon="back-light" onPress={onPress} />
         <View style={styles.text}>
             <Text style={styles.name}>Eleanor Alexandra</Text>
             <Text style={styles.job}>Dokter Umum</Text>

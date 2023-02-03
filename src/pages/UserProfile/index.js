@@ -4,14 +4,14 @@ import { Item, Header, Profile } from '../../components'
 import { NullPhoto } from '../../assets'
 import { colors, fonts } from '../../utils'
 
-const UserProfile = () => {
+const UserProfile = ({navigation}) => {
   return (
     <View style={styles.container}>
-        <Header title="Profile" />
+        <Header title="Profile" onPress={() => navigation.goBack()} />
         <View style={styles.content}>
             <Profile name="Haganta Bangun" job="Software Engineer" />
             <View style={styles.settings}>
-                <Item name="Edit Profile" desc="Last updated: yesterday" icon="edit-profile" />
+                <Item name="Edit Profile" desc="Last updated: yesterday" icon="edit-profile" onPress={() => navigation.navigate('EditProfile')} />
                 <Item name="Language" desc="Available in 12 languages" icon="language" />
                 <Item name="Rate Us" desc="on Google Play Store" icon="rate" />
                 <Item name="Help Center" desc="Read our guidelines" icon="help" />

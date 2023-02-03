@@ -8,7 +8,7 @@ import Profile from './Profile'
 
 const Header = ({title, onPress, type}) => {
   if (type === 'profile') {
-    return <Profile />
+    return <Profile onPress={onPress}/>
   }
 
   return (

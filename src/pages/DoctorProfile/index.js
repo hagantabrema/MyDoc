@@ -2,10 +2,10 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Button, DoctorDataItem, Header, Profile } from '../../components'
 
-const DoctorProfile = () => {
+const DoctorProfile = ({navigation}) => {
   return (
     <View style={styles.container}>
-        <Header title="Profile" />
+        <Header title="Profile" onPress={() => navigation.goBack()} />
         <View style={styles.content}>
             <Profile name="Eleanor Alexandra" job="Dokter Umum" />
             <View>
