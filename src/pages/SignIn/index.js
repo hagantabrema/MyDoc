@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Logo } from '../../assets'
 import { Button, Gap, Input, Link } from '../../components'
@@ -6,7 +6,7 @@ import { colors, fonts } from '../../utils'
 
 const SignIn = ({navigation}) => {
   return (
-    <View style={styles.container}>
+    <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
       <Logo />
       <Text style={styles.text}>Masuk dan mulai berkonsultasi</Text>
       <Gap height={40} />
@@ -19,7 +19,7 @@ const SignIn = ({navigation}) => {
       <Button title="Sign In" onPress={() => navigation.replace('MainApp')} />
       <Gap height={30} />
       <Link text="Create New Account" size={16} align="center" onPress={() => navigation.navigate('SignUp')}/>
-    </View>
+    </ScrollView>
   )
 }
 

@@ -15,6 +15,7 @@ import NewsItem from './NewsItem';
 import RatedDoctors from './RatedDoctors';
 import Profile from "./Profile";
 import DoctorDataItem from "./DoctorDataItem";
+import Loading from "./Loading";
 
 export {
     Button,
@@ -33,5 +34,6 @@ export {
     MessageItem,
     MessageInput,
     Profile,
-    DoctorDataItem
+    DoctorDataItem,
+    Loading
 }

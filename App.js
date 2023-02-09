@@ -3,6 +3,8 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React from 'react'
 import { BottomNavigator } from './src/components'
+import app from './src/config'
+import FlashMessage from "react-native-flash-message"
 import { GetStarted, SignIn, SignUp, Splash, UploadPhoto, Doctor, Hospitals, Messages, DoctorList, Chatting, UserProfile, DoctorProfile, EditProfile } from './src/pages'
 
 const Stack = createNativeStackNavigator()
@@ -32,7 +34,8 @@ const MainApp = () => {
 
 const App = () => {
   return (
-    <NavigationContainer>
+    <>
+      <NavigationContainer>
       <Stack.Navigator initialRouteName='Splash'>
         <Stack.Screen
           name='Splash'
@@ -90,7 +93,9 @@ const App = () => {
           options={{headerShown: false}}
         />
       </Stack.Navigator>
-    </NavigationContainer>
+      </NavigationContainer>
+      <FlashMessage position="top" />
+    </>
   )
 }
 
