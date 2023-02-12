@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import { Button, Gap, Header, Input, Loading } from '../../components'
 import useForm from '../../utils/useForm'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
+import { getDatabase, ref, set } from "firebase/database"
 import { showMessage, hideMessage } from "react-native-flash-message"
-import { colors } from '../../utils'
+import { colors, storeData } from '../../utils'
 
 const SignUp = ({navigation}) => {
 
@@ -25,22 +26,44 @@ const SignUp = ({navigation}) => {
         const user = userCredential.user;
         setLoading(false)
         setForm('reset')
-        console.log('success:', user)
+
+        const data = {
+          fullName: form.fullName,
+          job: form.job,
+          email: form.email,
+        }
+
+        const db = getDatabase()
+        set(ref(db, 'users/' + user.uid), data)
+        storeData('users', data)
+
+        showMessage({
+          message: 'Registrasi berhasil',
+          type: 'default',
+          backgroundColor: colors.primary,
+          color: colors.white,
+        })
+
+        navigation.navigate('UploadPhoto', {
+          fullName: data.fullName,
+          job: data.job
+        })
+        console.log('account created:', user)
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        const errorCode = error.code
+        const errorMessage = error.message
         setLoading(false)
+
         showMessage({
           message: errorMessage,
           type: "default",
           backgroundColor: colors.error,
           color: 'white'
-        });
+        })
+
         console.log('err:', errorCode, errorMessage)
-      });
-      
-    //navigation.navigate('UploadPhoto')
+      })
     //console.log(form)
   }
 
