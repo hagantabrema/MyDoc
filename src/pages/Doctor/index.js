@@ -1,9 +1,17 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { DoctorCategory, Gap, HomeProfile, NewsItem, RatedDoctors } from '../../components'
-import { colors, fonts } from '../../utils'
+import { colors, fonts, getData } from '../../utils'
 
 const Doctor = ({navigation}) => {
+
+  useEffect(() => {
+    getData('users')
+    .then(res => {
+      console.log('user data:', res)
+    })
+  }, [])
+
   return (
     <View style={styles.container}>
       <View style={styles.wrapper}>

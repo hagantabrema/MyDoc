@@ -31,11 +31,12 @@ const SignUp = ({navigation}) => {
           fullName: form.fullName,
           job: form.job,
           email: form.email,
+          uid: user.uid
         }
 
-        const db = getDatabase()
-        set(ref(db, 'users/' + user.uid), data)
-        storeData('users', data)
+        // const db = getDatabase()
+        // set(ref(db, 'users/' + user.uid), data)
+        // storeData('users', data)
 
         showMessage({
           message: 'Registrasi berhasil',
@@ -44,10 +45,7 @@ const SignUp = ({navigation}) => {
           color: colors.white,
         })
 
-        navigation.navigate('UploadPhoto', {
-          fullName: data.fullName,
-          job: data.job
-        })
+        navigation.navigate('UploadPhoto', data)
         console.log('account created:', user)
       })
       .catch((error) => {
