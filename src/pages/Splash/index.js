@@ -2,14 +2,22 @@ import { StyleSheet, Text, View } from 'react-native'
 import React, { useEffect } from 'react'
 import { Logo } from '../../assets'
 import { colors, fonts } from '../../utils'
+import { getAuth, onAuthStateChanged } from "firebase/auth"
 
 const Splash = ({navigation}) => {
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('GetStarted')
+      const auth = getAuth();
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          navigation.replace('MainApp')
+        } else {
+          navigation.replace('GetStarted')
+        }
+      })
     }, 1500)
-  }, [])
+  }, [navigation])
 
   return (
     <View style={styles.container}>
